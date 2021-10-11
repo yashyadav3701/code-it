@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int c=0;
+        string s;
+        cin>>s;
+        int n=s.length();
+        for(int i=0;i<n;i++)
+        {
+            if(s[i]==42)
+            {
+                if(s[i+1]==48 && s[i+2]==48)
+                c+=3;
+                else if((s[i+1]==48 && s[i+2]!=48) || (s[i+1]!=48 && s[i+2]==48)) 
+                c++;
+    
+            }
+        }
+        if(n==c)
+        cout<<"YES\n";
+        else
+        cout<<"NO\n";
+    }
+    return 0;
+}
